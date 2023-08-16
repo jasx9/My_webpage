@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    font-size: 3vw;
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, #ed4f5b, #5284ff,#ebf5fe);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+.pages {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* page 1 */
+
+#page_1>.container {
+    background-color: #ebf5fe;
+    height: 90%;
+    width: 90%;
+    border-radius: 5vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 9px;
+}
+
+.text_1 {
+    grid-column: span 2;
+    color: #240960;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+p {margin: 6px;}
+
+h1 {margin: 0;}
+
+.text_2 {
+    grid-area: 2 / 1 / span 1 / span 2;
+    color: #240960;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+}
+
+
+.error_pic {
+    grid-area: 2 / 3 / span 1 / span 2;
+    display: flex;
+    height: 35vh;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    #page_1>.container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 9px;
+    }
+
+    .text_1 {
+        grid-area: 2 / 1 / span 1 / span 1;
+        justify-content: center;
+    }
+
+    .text_2 {
+        grid-area: 3 / 1 / span 1 / span 1;
+        align-items: center;
+    }
+
+    .error_pic {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+}
+
+@media (max-width: 438px) {
+    .error_pic {
+        height: 50vw;
+        margin-top: 20px;
+    }
+}
+
+
+/* page 2 */
+
+#page_2>.container {
+    height: 100%;
+    width: 90%;
+    position: relative;
+    font: sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.windows_pic {
+    height: 100vh;
+    padding-left: 70px;
+}
+
+.job {
+    position: absolute;
+    top: 188px;
+    left: 228px;
+}
+
+.teapot {
+    position: absolute;
+    font-size: 32px;
+    top: 316px;
+    left: 160px;
+}
+
+.py {
+    position: absolute;
+    top: 230px;
+    left: 650px;
+}
+
+.ui {
+    position: absolute;
+    top: 350px;
+    left: 520px;
+}
+
+.js {
+    position: absolute;
+    top: 432px;
+    left: 450px;
+}
+
+.sql {
+    position: absolute;
+    top: 580px;
+    left: 520px;
+}
+
+.htcs {
+    position: absolute;
+    top: 556px;
+    left: 652px;
+    white-space: nowrap;
+}
+
+.bs {
+    position: absolute;
+    top: 660px;
+    left: 1080px;
+}
+
+.bar {
+    font-size: 40px;
+}
+
+
+/* page 3 */
+
+#page_3 {
+    background-image: url("./Assets/Screenshot\ 2023-08-16\ 191806.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: x-small;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 9px;
+}
+
+.dp {
+    grid-area: 1 / 1 / span 2 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 50vh;
+}
+
+.connect {
+    grid-area: 3 / 1 / span 1 / span 1;
+    /* display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: auto auto; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cicon {
+    display: flex;
+    justify-content: end;
+}
+
+.ctext {
+    grid-area: 1 / 2 / span 2 / span 1;
+    font-size: 60px;
+    white-space: nowrap;
+    color: #8561f4;
+    text-shadow: 1px 1px 5px orange;
+    display: flex;
+    align-items: center;
+}
+
+.clink_mandate {
+    display: flex;
+    justify-content: end;
+}
+
+.social_media {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icons {
+    grid-area: 4 / 1 / span 1 / span 1;
+    font-size: 24px;
+}
+
+.svg {
+    max-width: 100px;
+}
+
+@media (max-width: 992px) {
+    #page_3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .connect {
+        display: flex;
+        justify-content: center;
+    }
+}
